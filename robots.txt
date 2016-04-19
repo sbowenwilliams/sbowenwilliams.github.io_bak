@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://sbowenwilliams.github.io/sitemap.xml 
