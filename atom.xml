@@ -4,7 +4,7 @@
   <title><![CDATA[Hi! I'm Sean Bowen-Williams.]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-04-20T10:20:10-05:00</updated>
+  <updated>2016-04-22T11:53:31-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -12,5 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Increasing Vagrant Performance for Rails Development]]></title>
+    <link href="http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/"/>
+    <updated>2016-04-22T11:48:07-05:00</updated>
+    <id>http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development</id>
+    <content type="html"><![CDATA[<h1>Increased Vagrant Performance for Rails Development</h1>
+
+<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better is nearly every conceivable way and it even makes me a better lover.</p>
+
+<p>But for all the pros Vagrant is still a virtual machine, and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
+
+<h2>Disable Log files</h2>
+
+<p>Rails likes to write stuff down. A lot. When I cracked open my own <code>development.log</code> file it had nearly half a million lines. That&rsquo;s lots of wasted cycles waiting to write to a file. I&rsquo;m going to share a dirty secret: I&rsquo;ve never used the development log file for debugging. So let&rsquo;s get rid of it.
+Within <code>config/development.rb</code> add:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ProjectName::Application.configure do
+</span><span class='line'>    config.logger = ActiveSupport::Logger.new(nil)
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Where <code>ProjectName</code> is the, well, name of your project.</p>
+
+<p>This still provides output for the console and seems to work well with other logging gems.</p>
+
+<h2>Use The NFS</h2>
+
+<p>VirtualBox uses it&rsquo;s own protocol to share files between the host and Vagrant by default. NFS, in most cases, will be much faster. Luckily switching over is dead simple. Fire up your favorite text editor and add the following to your Vagrantfile:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Required, pick a local IP
+</span><span class='line'>config.vm.network :private_network, ip: '192.168.x.x'
+</span><span class='line'>config.vm.synced_folder '.', '/vagrant', nfs: true</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Just one core please</h2>
+
+<p>More is not always&hellip; more. It has been proven <a href="https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/">several</a><a href="http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/">times</a> (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
+Once again edit your Vagrantfile to include the following line:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vb.customize ["modifyvm", :id, "--cpus", "1"]</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Final Thoughts</h2>
+
+<p>There are definitely other tweaks out there that could increase performance, but the above are what have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between &frac14; and &frac12; total system memory. I encourage experimetation.</p>
+]]></content>
+  </entry>
   
 </feed>
