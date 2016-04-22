@@ -121,13 +121,13 @@
   </header>
 
 
-<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better is nearly every conceivable way and it even makes me a better lover.</p>
+<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better in nearly every conceivable way, and it even makes me a better lover.</p>
 
-<p>But for all the pros Vagrant is still a virtual machine, and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
+<p>But for all its pros, Vagrant is still a virtual machine and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
 
 <h2>Disable Log files</h2>
 
-<p>Rails likes to write stuff down. A lot. When I cracked open my own <code>development.log</code> file it had nearly half a million lines. That&rsquo;s lots of wasted cycles waiting to write to a file. I&rsquo;m going to share a dirty secret: I&rsquo;ve never used the development log file for debugging. So let&rsquo;s get rid of it.
+<p>Rails likes to write stuff down. A lot. When I cracked open my own <code>development.log</code> file it had nearly half a million lines. That&rsquo;s lots of wasted operations writing to a file. I&rsquo;m going to share a dirty secret: I&rsquo;ve never used the development log file for debugging. So let&rsquo;s get rid of it.
 Within <code>config/development.rb</code> add:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -156,7 +156,7 @@ Within <code>config/development.rb</code> add:</p>
 
 <h2>Just one core please</h2>
 
-<p>More is not always&hellip; more. It has been proven <a href="https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/">several</a><a href="http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/">times</a> (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
+<p>More is not always&hellip; more. It has been proven <a href="https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/">several</a> <a href="http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/">times</a> (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
 Once again edit your Vagrantfile to include the following line:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -165,7 +165,7 @@ Once again edit your Vagrantfile to include the following line:</p>
 
 <h2>Final Thoughts</h2>
 
-<p>There are definitely other tweaks out there that could increase performance, but the above are what have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between &frac14; and &frac12; total system memory. I encourage experimetation.</p>
+<p>There are definitely other tweaks out there that could increase performance, but the above have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between &frac14; and &frac12; total system memory. I encourage experimentation.</p>
 
 
 
