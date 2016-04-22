@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Hi! I'm Sean Bowen-Williams.]]></title>
+  <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-04-22T11:53:31-05:00</updated>
+  <updated>2016-04-22T15:25:54-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -18,9 +18,7 @@
     <link href="http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/"/>
     <updated>2016-04-22T11:48:07-05:00</updated>
     <id>http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development</id>
-    <content type="html"><![CDATA[<h1>Increased Vagrant Performance for Rails Development</h1>
-
-<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better is nearly every conceivable way and it even makes me a better lover.</p>
+    <content type="html"><![CDATA[<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better is nearly every conceivable way and it even makes me a better lover.</p>
 
 <p>But for all the pros Vagrant is still a virtual machine, and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
 
