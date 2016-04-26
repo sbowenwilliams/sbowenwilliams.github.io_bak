@@ -4,7 +4,7 @@
   <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-04-25T19:09:01-05:00</updated>
+  <updated>2016-04-25T20:21:55-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Registers Basics]]></title>
+    <link href="http://sbowenwilliams.github.io/blog/2016/04/25/vim-register-basics/"/>
+    <updated>2016-04-25T20:15:32-05:00</updated>
+    <id>http://sbowenwilliams.github.io/blog/2016/04/25/vim-register-basics</id>
+    <content type="html"><![CDATA[<h2>But why male models&hellip; I mean registers?</h2>
+
+<p>How many times has the following situation happened to you?</p>
+
+<p>You want to copy a line of text so you:
+1. Yank the line in question
+2. Delete another line along the way
+3. Attempt to put the original line, accidentally putting the deleted line</p>
+
+<p><img src="http://seanbw.com/images/vim_registers1.gif"></p>
+
+<p>This was a major hurdle while switching from RubyMine to Vim full time. Luckily I had a much more experienced, handsome coworker (shoutouts to Tony) who revealed to me the awesome that are Vim registers.</p>
+
+<p>To see them in action yourself, open Vim and type <code>:reg</code></p>
+
+<p>No, seriously, do it. I&rsquo;ll wait.</p>
+
+<p><img src="http://seanbw.com/images/waiting.gif"></p>
+
+<p>Want to put the last line you yanked and NOT the last one you deleted?
+Use the <code>0</code>th register.
+<code>"0p</code></p>
+
+<p>This is just scratching the surface of registers though. Let&rsquo;s continue on.</p>
+
+<h2>Named Registers</h2>
+
+<p>Another fantastically useful feature of registers are named registers. This gives you the ability to store text under an alias for later use.</p>
+
+<p><img src="http://seanbw.com/images/vim_registers2.gif"></p>
+
+<p>In this example I copy the final line to the &lsquo;a&rsquo; register with:
+<code>"ayy</code>
+and you then you can see it in the &lsquo;a&rsquo; register!
+This text can later be put with:
+`&ldquo;ap'</p>
+
+<h2>Final Thoughts</h2>
+
+<p>This is really only the beginning of Vim registers. However, these two usages have improved my day to day Vim usage dramatically.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Increasing Vagrant Performance for Rails Development]]></title>

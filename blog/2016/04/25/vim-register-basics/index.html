@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Sean Bowen-Williams</title>
+  <title>Vim Registers Basics - Sean Bowen-Williams</title>
   <meta name="author" content="Sean Bowen-Williams">
 
   
-  <meta name="description" content=" Tweet Blog Archive 2016 Vim Registers Basics
-Apr 25 2016 Increasing Vagrant Performance for Rails Development
-Apr 22 2016 ">
+  <meta name="description" content="Tweet Vim Registers Basics Apr 25th, 2016 8:15 pm But why male models&hellip; I mean registers? How many times has the following situation happened &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Apr 22 2016 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sbowenwilliams.github.io/blog/archives/">
+  <link rel="canonical" href="http://sbowenwilliams.github.io/blog/2016/04/25/vim-register-basics/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -107,55 +105,82 @@ Apr 22 2016 ">
 
   </header>
   <section id="main">
-    <div>
-<article role="article" class="post">
+    <article class="post">
+  <div class="sharing-box">
   
-    <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/blog/archives/index.html" data-via="" data-counturl="http://sbowenwilliams.github.io/blog/archives/index.html" data-size="large">Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/blog/2016/04/25/vim-register-basics/" data-via="" data-counturl="http://sbowenwilliams.github.io/blog/2016/04/25/vim-register-basics/" data-size="large">Tweet</a>
   
   
   
 </div>
 
-  
   
   <header>
-    <h2 class="entry-title">Blog Archive</h2>
+    
+      <h2 class="entry-title">Vim Registers Basics</h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-04-25T20:15:32-05:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>8:15 pm</span></time>
+		
+
+
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<h2>But why male models&hellip; I mean registers?</h2>
 
-  
-  <h2>2016</h2>
+<p>How many times has the following situation happened to you?</p>
 
-<article>
-  
-<h1><a href="/blog/2016/04/25/vim-register-basics/">Vim Registers Basics</a></h1>
-<time datetime="2016-04-25T20:15:32-05:00" pubdate><span class='month'>Apr</span> <span class='day'>25</span> <span class='year'>2016</span></time>
+<p>You want to copy a line of text so you:
+1. Yank the line in question
+2. Delete another line along the way
+3. Attempt to put the original line, accidentally putting the deleted line</p>
+
+<p><img src="http://seanbw.com/images/vim_registers1.gif"></p>
+
+<p>This was a major hurdle while switching from RubyMine to Vim full time. Luckily I had a much more experienced, handsome coworker (shoutouts to Tony) who revealed to me the awesome that are Vim registers.</p>
+
+<p>To see them in action yourself, open Vim and type <code>:reg</code></p>
+
+<p>No, seriously, do it. I&rsquo;ll wait.</p>
+
+<p><img src="http://seanbw.com/images/waiting.gif"></p>
+
+<p>Want to put the last line you yanked and NOT the last one you deleted?
+Use the <code>0</code>th register.
+<code>"0p</code></p>
+
+<p>This is just scratching the surface of registers though. Let&rsquo;s continue on.</p>
+
+<h2>Named Registers</h2>
+
+<p>Another fantastically useful feature of registers are named registers. This gives you the ability to store text under an alias for later use.</p>
+
+<p><img src="http://seanbw.com/images/vim_registers2.gif"></p>
+
+<p>In this example I copy the final line to the &lsquo;a&rsquo; register with:
+<code>"ayy</code>
+and you then you can see it in the &lsquo;a&rsquo; register!
+This text can later be put with:
+`&ldquo;ap'</p>
+
+<h2>Final Thoughts</h2>
+
+<p>This is really only the beginning of Vim registers. However, these two usages have improved my day to day Vim usage dramatically.</p>
+
 
 
 </article>
 
-
-
-<article>
-  
-<h1><a href="/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/">Increasing Vagrant Performance for Rails Development</a></h1>
-<time datetime="2016-04-22T11:48:07-05:00" pubdate><span class='month'>Apr</span> <span class='day'>22</span> <span class='year'>2016</span></time>
-
-
-</article>
-
-</div>
-
-  
-</article>
-
-</div>
 
     <nav role="navigation" id="pagination">
 
