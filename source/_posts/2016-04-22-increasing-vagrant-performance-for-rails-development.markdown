@@ -5,14 +5,13 @@ date: 2016-04-22 11:48:07 -0500
 comments: true
 categories: 
 ---
-# Increased Vagrant Performance for Rails Development
 
-Vagrant is awesome. It kicks ass. It's the cat's pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better is nearly every conceivable way and it even makes me a better lover.
+Vagrant is awesome. It kicks ass. It's the cat's pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better in nearly every conceivable way, and it even makes me a better lover.
 
-But for all the pros Vagrant is still a virtual machine, and virtual machines are slow. But don't fret, there are optimizations we can make to speed up your rails app within Vagrant.
+But for all its pros, Vagrant is still a virtual machine and virtual machines are slow. But don't fret, there are optimizations we can make to speed up your rails app within Vagrant.
 
 ## Disable Log files
-Rails likes to write stuff down. A lot. When I cracked open my own `development.log` file it had nearly half a million lines. That's lots of wasted cycles waiting to write to a file. I'm going to share a dirty secret: I've never used the development log file for debugging. So let's get rid of it.
+Rails likes to write stuff down. A lot. When I cracked open my own `development.log` file it had nearly half a million lines. That's lots of wasted operations writing to a file. I'm going to share a dirty secret: I've never used the development log file for debugging. So let's get rid of it.
 Within `config/development.rb` add:
 ```
 ProjectName::Application.configure do
@@ -32,7 +31,7 @@ config.vm.synced_folder '.', '/vagrant', nfs: true
 ```
 
 ## Just one core please
-More is not always... more. It has been proven [several](https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/)[times](http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/) (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
+More is not always... more. It has been proven [several](https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/) [times](http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/) (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
 Once again edit your Vagrantfile to include the following line:
 
 ```
@@ -40,4 +39,4 @@ vb.customize ["modifyvm", :id, "--cpus", "1"]
 ```
 
 ## Final Thoughts
-There are definitely other tweaks out there that could increase performance, but the above are what have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between 1/4 and 1/2 total system memory. I encourage experimetation. 
+There are definitely other tweaks out there that could increase performance, but the above have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between 1/4 and 1/2 total system memory. I encourage experimentation. 
