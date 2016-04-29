@@ -4,7 +4,7 @@
   <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-04-29T15:35:01-05:00</updated>
+  <updated>2016-04-29T15:35:56-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -24,10 +24,10 @@
 
 <p>For example, how many times has the following situation happened to you?</p>
 
-<p>You want to copy a line of text so you:
-1. Yank the line in question</p>
+<p>You want to copy a line of text so you:</p>
 
 <ol>
+<li><p>Yank the line in question</p></li>
 <li><p>Delete another line along the way</p></li>
 <li><p>Attempt to put the original line, accidentally putting the deleted line</p></li>
 </ol>
