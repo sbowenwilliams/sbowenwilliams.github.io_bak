@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Sean Bowen-Williams</title>
+  <title>The Very Basics of Vim Registers - Sean Bowen-Williams</title>
   <meta name="author" content="Sean Bowen-Williams">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sbowenwilliams.github.io/">
+  <link rel="canonical" href="http://sbowenwilliams.github.io/blog/2016/04/29/the-very-basics-of-vim-registers/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -105,26 +105,19 @@
 
   </header>
   <section id="main">
-      
-  
-  
     <article class="post">
-      <div class="sharing-box">
+  <div class="sharing-box">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/index.html" data-via="" data-counturl="http://sbowenwilliams.github.io/index.html" data-size="large">Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/blog/2016/04/29/the-very-basics-of-vim-registers/" data-via="" data-counturl="http://sbowenwilliams.github.io/blog/2016/04/29/the-very-basics-of-vim-registers/" data-size="large">Tweet</a>
   
   
   
 </div>
 
-      
+  
   <header>
     
-      <h2 class="entry-title">
-        
-        <a href="/blog/2016/04/29/the-very-basics-of-vim-registers/">The Very Basics of Vim Registers</a>
-        
-      </h2>
+      <h2 class="entry-title">The Very Basics of Vim Registers</h2>
     
     
       <p class="meta">
@@ -143,7 +136,7 @@
   </header>
 
 
-  <h2>But Why?</h2>
+<h2>But Why?</h2>
 
 <p>Registers open up a world of possibilities in Vim. If you&rsquo;re not using them, then you&rsquo;re potentially limiting your Vim productivity.</p>
 
@@ -180,100 +173,10 @@ This text can later be put with:
 
 <p>We&rsquo;ve only scratched the surface on what&rsquo;s possible with Vim registers. <a href="http://usevim.com/2012/04/13/registers/">Use Vim</a> and <a href="http://vimcasts.org/episodes/meet-the-yank-register/">Vim Casts</a> both have excellent tutorials for more information.</p>
 
-  
-  
 
 
-    </article>
-  
-  
-    <article class="post">
-      <div class="sharing-box">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/index.html" data-via="" data-counturl="http://sbowenwilliams.github.io/index.html" data-size="large">Tweet</a>
-  
-  
-  
-</div>
+</article>
 
-      
-  <header>
-    
-      <h2 class="entry-title">
-        
-        <a href="/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/">Increasing Vagrant Performance for Rails Development</a>
-        
-      </h2>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-04-22T11:48:07-05:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 am</span></time>
-		
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better in nearly every conceivable way, and it even makes me a better lover.</p>
-
-<p>But for all its pros, Vagrant is still a virtual machine and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
-
-<h2>Disable Log files</h2>
-
-<p>Rails likes to write stuff down. A lot. When I cracked open my own <code>development.log</code> file it had nearly half a million lines. That&rsquo;s lots of wasted operations writing to a file. I&rsquo;m going to share a dirty secret: I&rsquo;ve never used the development log file for debugging. So let&rsquo;s get rid of it.
-Within <code>config/development.rb</code> add:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ProjectName::Application.configure do
-</span><span class='line'>    config.logger = ActiveSupport::Logger.new(nil)
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Where <code>ProjectName</code> is the, well, name of your project.</p>
-
-<p>This still provides output for the console and seems to work well with other logging gems.</p>
-
-<h2>Use The NFS</h2>
-
-<p>VirtualBox uses it&rsquo;s own protocol to share files between the host and Vagrant by default. NFS, in most cases, will be much faster. Luckily switching over is dead simple. Fire up your favorite text editor and add the following to your Vagrantfile:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Required, pick a local IP
-</span><span class='line'>config.vm.network :private_network, ip: '192.168.x.x'
-</span><span class='line'>config.vm.synced_folder '.', '/vagrant', nfs: true</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Just one core please</h2>
-
-<p>More is not always&hellip; more. It has been proven <a href="https://ruin.io/2014/benchmarking-virtualbox-multiple-core-performance/">several</a> <a href="http://www.mihaimatei.com/virtualbox-performance-issues-multiple-cpu-cores/">times</a> (okay, a couple times) that adding multiple cores actually reduces VirtualBox performance.
-Once again edit your Vagrantfile to include the following line:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>vb.customize ["modifyvm", :id, "--cpus", "1"]</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Final Thoughts</h2>
-
-<p>There are definitely other tweaks out there that could increase performance, but the above have the biggest impact for me. The jury is still out on an optimal amount of RAM, but the consensus is somewhere between &frac14; and &frac12; total system memory. I encourage experimentation.</p>
-
-  
-  
-
-
-    </article>
-  
 
     <nav role="navigation" id="pagination">
 
