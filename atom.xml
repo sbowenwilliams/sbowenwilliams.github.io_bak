@@ -4,7 +4,7 @@
   <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-05-03T20:39:41-05:00</updated>
+  <updated>2016-05-03T20:42:00-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -28,41 +28,44 @@
 
 <h3>First Test</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>describe Game do
-</span><span class='line'>  it 'initializes a new game' do
-</span><span class='line'>    expect(subject).to be_an_instance_of Game
-</span><span class='line'>  end
-</span><span class='line'>end
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">describe</span> <span class="no">Game</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">it</span> <span class="s1">&#39;initializes a new game&#39;</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">expect</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">be_an_instance_of</span> <span class="no">Game</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>When run it results in:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bowling.rb:1:in `&lt;top (required)&gt;': uninitialized constant Game (NameError)</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">bowling</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">1</span><span class="ss">:in</span> <span class="sb">`&lt;top (required)&gt;&#39;: uninitialized constant Game (NameError)</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>So we should probably define a <code>Game</code> class huh?</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class Game
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Game</span>
 </span><span class='line'>
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>That&rsquo;s enough to pass this first test!</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Finished in 0.00128 seconds (files took 0.15122 seconds to load)
-</span><span class='line'>1 example, 0 failures</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Finished</span> <span class="k">in</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0012</span><span class="mi">8</span> <span class="n">seconds</span> <span class="p">(</span><span class="n">files</span> <span class="n">took</span> <span class="mi">0</span><span class="o">.</span><span class="mi">15122</span> <span class="n">seconds</span> <span class="n">to</span> <span class="nb">load</span><span class="p">)</span>
+</span><span class='line'><span class="mi">1</span> <span class="n">example</span><span class="p">,</span> <span class="mi">0</span> <span class="n">failures</span>
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
