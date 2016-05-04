@@ -4,7 +4,7 @@
   <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-05-03T21:01:26-05:00</updated>
+  <updated>2016-05-03T21:01:51-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -44,8 +44,7 @@
 <p>When run it results in:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">bowling</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">1</span><span class="ss">:in</span> <span class="sb">`&lt;top (required)&gt;&#39;: uninitialized constant Game (NameError)</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bowling.rb:1:in `&lt;top (required)>': uninitialized constant Game (NameError)</span></code></pre></td></tr></table></div></figure>
 
 
 <p>So we should probably define a <code>Game</code> class huh?</p>
