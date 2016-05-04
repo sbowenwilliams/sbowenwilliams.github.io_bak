@@ -4,7 +4,7 @@
   <title><![CDATA[Sean Bowen-Williams]]></title>
   <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
   <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-05-03T16:08:55-05:00</updated>
+  <updated>2016-05-03T20:39:41-05:00</updated>
   <id>http://sbowenwilliams.github.io/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Bowling Kata]]></title>
+    <link href="http://sbowenwilliams.github.io/blog/2016/05/03/the-bowling-kata/"/>
+    <updated>2016-05-03T20:35:41-05:00</updated>
+    <id>http://sbowenwilliams.github.io/blog/2016/05/03/the-bowling-kata</id>
+    <content type="html"><![CDATA[<h1>Getting in to the Mind of a Master</h1>
+
+<p>A &lsquo;kata&rsquo; is defined as a &ldquo;system of individual training exercises for practitioners of karate and other martial arts&rdquo;. Programming isn&rsquo;t exactly martial arts, but as coders we can make use of our own form of kata.</p>
+
+<p>A programming kata is a tool used to teach how to think the way a master thinks, to code as they code. It should be repeated, it should be memorized, and then it should be repeated again.</p>
+
+<p>The Bowling Game Kata is a common one: testing and designing a bowling game from scratch. Let&rsquo;s get started:</p>
+
+<h3>First Test</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>describe Game do
+</span><span class='line'>  it 'initializes a new game' do
+</span><span class='line'>    expect(subject).to be_an_instance_of Game
+</span><span class='line'>  end
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When run it results in:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bowling.rb:1:in `&lt;top (required)&gt;': uninitialized constant Game (NameError)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we should probably define a <code>Game</code> class huh?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Game
+</span><span class='line'>
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s enough to pass this first test!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Finished in 0.00128 seconds (files took 0.15122 seconds to load)
+</span><span class='line'>1 example, 0 failures</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Very Basics of Vim Registers]]></title>

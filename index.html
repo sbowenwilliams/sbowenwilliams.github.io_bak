@@ -9,7 +9,7 @@
   <meta name="author" content="Sean Bowen-Williams">
 
   
-  <meta name="description" content="Tweet The Very Basics of Vim Registers Apr 29th, 2016 3:33 pm But Why? Registers open up a world of possibilities in Vim. If you&rsquo;re not using &hellip;">
+  <meta name="description" content="Tweet The Bowling Kata May 3rd, 2016 8:35 pm Getting in to the Mind of a Master A &lsquo;kata&rsquo; is defined as a &ldquo;system of individual &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,9 +78,6 @@
     <a href="http://github.com/sbowenwilliams/">github</a>
   </li>
 
-  <li class="link rss">
-    <a href="/atom.xml">rss feed</a>
-  </li>
 </ul>
 
 
@@ -107,6 +104,95 @@
   </header>
   <section id="main">
       
+  
+  
+    <article class="post">
+      <div class="sharing-box">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sbowenwilliams.github.io/index.html" data-via="" data-counturl="http://sbowenwilliams.github.io/index.html" data-size="large">Tweet</a>
+  
+  
+  
+</div>
+
+      
+  <header>
+    
+      <h2 class="entry-title">
+        
+        <a href="/blog/2016/05/03/the-bowling-kata/">The Bowling Kata</a>
+        
+      </h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-05-03T20:35:41-05:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>8:35 pm</span></time>
+		
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <h1>Getting in to the Mind of a Master</h1>
+
+<p>A &lsquo;kata&rsquo; is defined as a &ldquo;system of individual training exercises for practitioners of karate and other martial arts&rdquo;. Programming isn&rsquo;t exactly martial arts, but as coders we can make use of our own form of kata.</p>
+
+<p>A programming kata is a tool used to teach how to think the way a master thinks, to code as they code. It should be repeated, it should be memorized, and then it should be repeated again.</p>
+
+<p>The Bowling Game Kata is a common one: testing and designing a bowling game from scratch. Let&rsquo;s get started:</p>
+
+<h3>First Test</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>describe Game do
+</span><span class='line'>  it 'initializes a new game' do
+</span><span class='line'>    expect(subject).to be_an_instance_of Game
+</span><span class='line'>  end
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When run it results in:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bowling.rb:1:in `&lt;top (required)&gt;': uninitialized constant Game (NameError)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we should probably define a <code>Game</code> class huh?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Game
+</span><span class='line'>
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s enough to pass this first test!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Finished in 0.00128 seconds (files took 0.15122 seconds to load)
+</span><span class='line'>1 example, 0 failures</span></code></pre></td></tr></table></div></figure>
+
+
+  
+  
+
+
+    </article>
   
   
     <article class="post">
