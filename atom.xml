@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Sean Bowen-Williams]]></title>
-  <link href="http://sbowenwilliams.github.io/atom.xml" rel="self"/>
-  <link href="http://sbowenwilliams.github.io/"/>
-  <updated>2016-05-17T09:06:48-05:00</updated>
-  <id>http://sbowenwilliams.github.io/</id>
+  <link href="http://seanbw.com/atom.xml" rel="self"/>
+  <link href="http://seanbw.com/"/>
+  <updated>2016-05-30T14:10:07-05:00</updated>
+  <id>http://seanbw.com/</id>
   <author>
     <name><![CDATA[Sean Bowen-Williams]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Bowling Kata]]></title>
-    <link href="http://sbowenwilliams.github.io/blog/2016/05/03/the-bowling-kata/"/>
+    <link href="http://seanbw.com/blog/2016/05/03/the-bowling-kata/"/>
     <updated>2016-05-03T20:35:41-05:00</updated>
-    <id>http://sbowenwilliams.github.io/blog/2016/05/03/the-bowling-kata</id>
+    <id>http://seanbw.com/blog/2016/05/03/the-bowling-kata</id>
     <content type="html"><![CDATA[<h1>Getting in to the Mind of a Master</h1>
 
 <p>A &lsquo;kata&rsquo; is defined as a &ldquo;system of individual training exercises for practitioners of karate and other martial arts&rdquo;. Programming isn&rsquo;t exactly martial arts, but as coders we can make use of our own form of kata.</p>
@@ -136,9 +136,9 @@ To be continued&hellip;</p>
   
   <entry>
     <title type="html"><![CDATA[The Very Basics of Vim Registers]]></title>
-    <link href="http://sbowenwilliams.github.io/blog/2016/04/29/the-very-basics-of-vim-registers/"/>
+    <link href="http://seanbw.com/blog/2016/04/29/the-very-basics-of-vim-registers/"/>
     <updated>2016-04-29T15:33:00-05:00</updated>
-    <id>http://sbowenwilliams.github.io/blog/2016/04/29/the-very-basics-of-vim-registers</id>
+    <id>http://seanbw.com/blog/2016/04/29/the-very-basics-of-vim-registers</id>
     <content type="html"><![CDATA[<h2>But Why?</h2>
 
 <p>Registers open up a world of possibilities in Vim. If you&rsquo;re not using them, then you&rsquo;re potentially limiting your Vim productivity.</p>
@@ -190,9 +190,9 @@ This text can later be put with:
   
   <entry>
     <title type="html"><![CDATA[Increasing Vagrant Performance for Rails Development]]></title>
-    <link href="http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/"/>
+    <link href="http://seanbw.com/blog/2016/04/22/increasing-vagrant-performance-for-rails-development/"/>
     <updated>2016-04-22T11:48:07-05:00</updated>
-    <id>http://sbowenwilliams.github.io/blog/2016/04/22/increasing-vagrant-performance-for-rails-development</id>
+    <id>http://seanbw.com/blog/2016/04/22/increasing-vagrant-performance-for-rails-development</id>
     <content type="html"><![CDATA[<p>Vagrant is awesome. It kicks ass. It&rsquo;s the cat&rsquo;s pajamas. It allows you to modularize dependencies that are specific to your app. It makes my life better in nearly every conceivable way, and it even makes me a better lover.</p>
 
 <p>But for all its pros, Vagrant is still a virtual machine and virtual machines are slow. But don&rsquo;t fret, there are optimizations we can make to speed up your rails app within Vagrant.</p>
